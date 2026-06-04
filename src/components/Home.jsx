@@ -7,8 +7,8 @@ import imgVilla      from '../assets/exterior_villa.png';
 import imgAlabaster  from '../assets/living_alabaster.png';
 import imgObsidian   from '../assets/living_obsidian.png';
 import imgTerracotta from '../assets/living_terracotta.png';
-import heroVideo1    from '../assets/const1.mp4';
-import heroVideo2    from '../assets/construction_hero.mp4';
+//import heroVideo1    from '../assets/const1.mp4';
+//import heroVideo2    from '../assets/construction_hero.mp4';
 import heroVideo3    from '../assets/presents.mp4';
 
 // ─── HERO IMAGES (construction + architecture mood) ──────────────────────────
@@ -51,7 +51,7 @@ export default function Home({ onNavigate }) {
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(0);
   const heroVideoRef = useRef(null);
-  const videos = [heroVideo1, heroVideo2];
+  //const videos = [heroVideo1, heroVideo2];
 
   // Auto-advance slides every 6s
   useEffect(() => {
