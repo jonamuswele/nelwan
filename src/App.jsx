@@ -188,7 +188,7 @@ export default function App() {
       {menuOpen && (
         <div 
           style={{
-            position: 'absolute',
+            position: 'fixed',
             top: '75px',
             left: 0,
             right: 0,
