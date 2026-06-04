@@ -210,6 +210,32 @@ export default function Home({ onNavigate }) {
           letter-spacing: 0.18em;
           text-transform: uppercase;
         }
+        @media (max-width: 768px) {
+          .hero-headline {
+            font-size: clamp(2.5rem, 8vw, 4.5rem) !important;
+            margin-bottom: 24px !important;
+          }
+          .tag-pill {
+            font-size: 0.95rem !important;
+            padding: 8px 18px !important;
+            margin-bottom: 20px !important;
+          }
+          .hero-tagline {
+            font-size: 1.15rem !important;
+            line-height: 1.65 !important;
+            margin-bottom: 32px !important;
+          }
+          .hero-stat-val {
+            font-size: 2.2rem !important;
+          }
+          .hero-stat-label {
+            font-size: 0.9rem !important;
+            letter-spacing: 0.05em !important;
+          }
+          .hero-location-text {
+            font-size: 0.85rem !important;
+          }
+        }
       `}</style>
 
       {/* ══════════════════════════════════════════════════════════════════════
@@ -295,7 +321,7 @@ export default function Home({ onNavigate }) {
           </div>
 
           {/* Big headline */}
-          <h1 style={{
+          <h1 className="hero-headline" style={{
             fontFamily: "'Cormorant Garamond', Georgia, serif",
             fontSize: 'clamp(3.5rem, 9vw, 7rem)',
             fontWeight: 300,
@@ -309,7 +335,7 @@ export default function Home({ onNavigate }) {
           </h1>
 
           {/* Tagline */}
-          <p style={{
+          <p className="hero-tagline" style={{
             fontFamily: "'Outfit', sans-serif",
             fontSize: 'clamp(0.9rem, 1.8vw, 1.08rem)',
             color: 'rgba(255,255,255,0.72)',
@@ -354,7 +380,7 @@ export default function Home({ onNavigate }) {
         }}>
           {STATS.map((s, i) => (
             <div key={i} className="stat-pill">
-              <span style={{
+              <span className="hero-stat-val" style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
                 fontSize: '1.7rem',
                 fontWeight: 600,
@@ -363,7 +389,7 @@ export default function Home({ onNavigate }) {
               }}>
                 {s.val}
               </span>
-              <span style={{
+              <span className="hero-stat-label" style={{
                 fontFamily: "'Outfit', sans-serif",
                 fontSize: '0.68rem',
                 color: 'rgba(255,255,255,0.5)',
@@ -379,7 +405,7 @@ export default function Home({ onNavigate }) {
           {/* Right side of stats bar: location + scroll hint */}
           <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '6px' }}>
             <MapPin size={13} style={{ color: '#C5A880' }} />
-            <span style={{
+            <span className="hero-location-text" style={{
               fontFamily: "'Outfit', sans-serif",
               fontSize: '0.7rem',
               color: 'rgba(255,255,255,0.45)',
