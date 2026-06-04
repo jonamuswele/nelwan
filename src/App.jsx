@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Compass, Phone, Sparkles, Mail, MapPin } from 'lucide-react';
+import { Compass, Phone, Sparkles, Mail, MapPin, Menu, X } from 'lucide-react';
 
 // Import our new subcomponents
 import Home from './components/Home';
@@ -9,6 +9,7 @@ import ContactPage from './components/ContactPage';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home'); // home, portfolio, visualizer, contact
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Shared Design Dossier State from showroom / visualizer selections
   const [dossierData, setDossierData] = useState({
@@ -152,8 +153,7 @@ export default function App() {
         </nav>
 
         {/* Contact quick actions */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          
+        <div className="header-cta-container" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           <button 
             className="btn-primary" 
             onClick={() => handleNavigate('contact')}
@@ -162,7 +162,89 @@ export default function App() {
             Prendre Contact
           </button>
         </div>
+
+        {/* Hamburger Mobile Menu Toggle */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          style={{
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            padding: '8px',
+            display: 'none',
+            color: 'var(--text-title)',
+            alignItems: 'center',
+            justifyContent: 'center',
+            outline: 'none'
+          }}
+          className="mobile-menu-btn"
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={24} style={{ color: 'var(--accent)' }} /> : <Menu size={24} />}
+        </button>
       </header>
+
+      {/* Mobile Navigation Dropdown Menu */}
+      {menuOpen && (
+        <div 
+          style={{
+            position: 'absolute',
+            top: '75px',
+            left: 0,
+            right: 0,
+            backgroundColor: '#FFFFFF',
+            borderBottom: '1px solid var(--border)',
+            boxShadow: '0 10px 20px rgba(0,0,0,0.05)',
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '24px 6%',
+            zIndex: 99,
+            gap: '16px'
+          }} 
+          className="mobile-nav-menu"
+        >
+          {['home', 'portfolio', 'visualizer', 'contact'].map(tab => {
+            const isActive = activeTab === tab;
+            let label = 'Accueil';
+            if (tab === 'portfolio') label = 'Nos Réalisations';
+            else if (tab === 'visualizer') label = 'Visualiseur';
+            else if (tab === 'contact') label = 'Contact';
+
+            return (
+              <span
+                key={tab}
+                onClick={() => {
+                  handleNavigate(tab);
+                  setMenuOpen(false);
+                }}
+                style={{
+                  cursor: 'pointer',
+                  padding: '12px 0',
+                  fontSize: '0.95rem',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.12em',
+                  fontWeight: 600,
+                  color: isActive ? 'var(--accent)' : 'var(--text-body)',
+                  borderBottom: '1px solid rgba(0,0,0,0.03)',
+                  transition: 'var(--transition-fast)'
+                }}
+              >
+                {label}
+              </span>
+            );
+          })}
+          <button 
+            className="btn-primary" 
+            onClick={() => {
+              handleNavigate('contact');
+              setMenuOpen(false);
+            }}
+            style={{ padding: '12px 20px', fontSize: '0.85rem', borderRadius: '4px', marginTop: '8px', width: '100%', textAlign: 'center' }}
+          >
+            Prendre Contact
+          </button>
+        </div>
+      )}
 
       {/* Render active page state */}
       <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
@@ -228,9 +310,28 @@ export default function App() {
         .nav-link-tab:hover {
           color: var(--accent) !important;
         }
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .mobile-nav-menu {
+          animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
         @media (max-width: 900px) {
           header nav {
             display: none !important;
+          }
+          .header-cta-container {
+            display: none !important;
+          }
+          .mobile-menu-btn {
+            display: flex !important;
           }
           footer div {
             grid-template-columns: 1fr !important;
