@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Outfit:wght@200;300;400;500;600&display=swap');
+
+/* Corporate Premium Light Theme System */
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAF9F6; /* Soft warm alabaster cream */
+  --bg-tertiary: #F1F5F9;
+  --text-title: #0F172A; /* Slate Black */
+  --text-body: #475569;  /* Slate Gray */
+  --accent: #0F2C59;     /* Deep Sapphire Blue */
+  --accent-rgb: 15, 44, 89;
+  --accent-gold: #C5A880; /* Champagne Gold */
+  --accent-gold-rgb: 197, 168, 128;
+  --border: #E2E8F0;      /* Light gray */
+  --shadow: rgba(15, 44, 89, 0.06);
+  --shadow-hover: rgba(15, 44, 89, 0.12);
+  
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Outfit', 'Inter', system-ui, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+  
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Root Layout Container */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography elements */
+h1, h2, h3, h4, h5 {
+  color: var(--text-title);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Standard Page Section Padding */
+section {
+  position: relative;
+  width: 100%;
+  padding: 100px 6%;
+  box-sizing: border-box;
+}
+
+/* Premium Primary Buttons */
+.btn-primary {
+  position: relative;
+  background: var(--accent);
+  color: #FFFFFF;
+  border: 1px solid var(--accent);
+  padding: 14px 32px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--transition-fast);
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(var(--accent-rgb), 0.15);
+}
+
+.btn-primary:hover {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(var(--accent-gold-rgb), 0.25);
+  transform: translateY(-2px);
+}
+
+/* Premium Secondary Buttons */
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  padding: 14px 32px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Clean Elegant Card Panels */
+.glass-panel {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: var(--transition);
+}
+
+.glass-panel:hover {
+  box-shadow: 0 20px 40px var(--shadow-hover);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Utility Title Components */
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: var(--text-title);
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Custom visual helpers */
+.glow-text {
+  text-shadow: 0 2px 10px rgba(var(--accent-rgb), 0.05);
+}
+
+/* Responsive Setup */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  section {
+    padding: 60px 6%;
+  }
+}
