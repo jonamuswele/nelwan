@@ -24,7 +24,7 @@ const HERO_SLIDES = [
     headline: ["Bâtir", "l'Avenir"],
   },
   {
-    img: 'https://6a22e17866b5d7d9ebc84028.imgix.net/a-construction-site-on-sunset-with-the-building-half-finished--413759.jpeg?auto=format&fit=fill&w=640',
+    img: 'https://6a22e17866b5d7d9ebc84028.imgix.net/a-construction-site-on-sunset-with-the-building-half-finished--413759.jpeg?w=614&h=368&ar=5%3A3&auto=enhance%2Cformat&fit=fill&fill=generative',
     tag: "Architecture",
     headline: ["Concevoir", "l'Excellence"],
   },
