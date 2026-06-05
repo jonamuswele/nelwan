@@ -19,17 +19,17 @@ import heropic2       from '../assets/hero3.jfif';
 // Using reliable Unsplash CDN images; swap with your own assets as needed
 const HERO_SLIDES = [
   {
-    img: heropic,
+    img: heropic1,
     tag: "Construction",
     headline: ["Bâtir", "l'Avenir"],
   },
   {
-    img: heropic1,
+    img: heropic,
     tag: "Architecture",
     headline: ["Concevoir", "l'Excellence"],
   },
   {
-    img: heropic2,
+    img: heropic1,
     tag: "Résidentiel Prestige",
     headline: ["Votre Rêve,", "Notre Métier"],
   },
