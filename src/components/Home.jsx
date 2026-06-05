@@ -10,15 +10,11 @@ import imgTerracotta from '../assets/living_terracotta.png';
 //import heroVideo1    from '../assets/const1.mp4';
 //import heroVideo2    from '../assets/construction_hero.mp4';
 import heroVideo3    from '../assets/presents.mp4';
-import heropic       from '../assets/heros1.jfif';
-import heropic1       from '../assets/heros2.jfif';
-import heropic2       from '../assets/heros3.jfif';
+
 
 
 // ─── HERO IMAGES (construction + architecture mood) ──────────────────────────
-// Using reliable Unsplash CDN images; swap with your own assets as needed
 const HERO_SLIDES = [
-  // ── HOUSES ──────────────────────────────────────────────────────────────
   {
     img: "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=1800&q=90&auto=format&fit=crop",
     tag: "Résidentiel Prestige",
@@ -34,7 +30,6 @@ const HERO_SLIDES = [
     tag: "Villa de Prestige",
     headline: ["L'Élégance,", "Réalisée"],
   },
-  // ── CONSTRUCTION SITES ──────────────────────────────────────────────────
   {
     img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=90&auto=format&fit=crop",
     tag: "Construction",
