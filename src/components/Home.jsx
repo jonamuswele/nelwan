@@ -19,7 +19,7 @@ import heropic2       from '../assets/heros3.jfif';
 // Using reliable Unsplash CDN images; swap with your own assets as needed
 const HERO_SLIDES = [
   {
-    img: 'https://6a22e17866b5d7d9ebc84028.imgix.net/a-construction-site-on-sunset-with-the-building-half-finished--413759.jpeg?auto=format&fit=fill&w=640',
+    img: 'https://6a22e17866b5d7d9ebc84028.imgix.net/a-white-villa-in-the-background-with-a-swimming-pool-closer-on-a-clear-sunny-day-509081.jpeg?auto=format&fit=fill&w=640',
     tag: "Construction",
     headline: ["Bâtir", "l'Avenir"],
   },
