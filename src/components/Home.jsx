@@ -10,8 +10,8 @@ import imgTerracotta from '../assets/living_terracotta.png';
 //import heroVideo1    from '../assets/const1.mp4';
 //import heroVideo2    from '../assets/construction_hero.mp4';
 import heroVideo3    from '../assets/presents.mp4';
-import heropic       from '../assets/hero1.jfif';
-import heropic1       from '../assets/hero2.jfif';
+import heropic       from '../assets/hero5.jfif';
+import heropic1       from '../assets/hero6.jfif';
 import heropic2       from '../assets/hero3.jfif';
 
 
