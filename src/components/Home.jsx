@@ -706,7 +706,7 @@ export default function Home({ onNavigate }) {
             ) : (
               <iframe
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=0&rel=0&modestbranding=1"
+                src="https://youtu.be/a_-euN9YZp8"
                 title="NELWAN SARL"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
