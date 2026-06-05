@@ -29,7 +29,7 @@ const HERO_SLIDES = [
     headline: ["Concevoir", "l'Excellence"],
   },
   {
-    img: heropic1,
+    img: https://6a22e17866b5d7d9ebc84028.imgix.net/construct/hero1.jfif?ar=1%3A1&h=736&w=736&auto=enhance%2Cformat&fit=fill&fill=generative,
     tag: "Résidentiel Prestige",
     headline: ["Votre Rêve,", "Notre Métier"],
   },
