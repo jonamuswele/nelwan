@@ -55,7 +55,7 @@ export default function Home({ onNavigate }) {
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(0);
   const heroVideoRef = useRef(null);
-  //const videos = [heroVideo1, heroVideo2];
+  
 
   // Auto-advance slides every 6s
   useEffect(() => {
@@ -91,7 +91,7 @@ export default function Home({ onNavigate }) {
         }
         .hero-img.visible {
           opacity: 1;
-          transform: scale(1.04);
+          transform: scale(1.01);
         }
 
         .slide-dot {
@@ -304,8 +304,6 @@ export default function Home({ onNavigate }) {
             <button key={i} className={`slide-dot ${i === slide ? 'active' : ''}`} onClick={() => goSlide(i)} />
           ))}
         </div>
-
-        {/* ── NELWAN wordmark top-left ── */}
         
         {/* ── MAIN TEXT BLOCK ── */}
         <div style={{
