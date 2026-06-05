@@ -10,22 +10,26 @@ import imgTerracotta from '../assets/living_terracotta.png';
 //import heroVideo1    from '../assets/const1.mp4';
 //import heroVideo2    from '../assets/construction_hero.mp4';
 import heroVideo3    from '../assets/presents.mp4';
+import heropic       from '../assets/hero1.jfif';
+import heropic1       from '../assets/hero2.jfif';
+import heropic2       from '../assets/hero3.jfif';
+
 
 // ─── HERO IMAGES (construction + architecture mood) ──────────────────────────
 // Using reliable Unsplash CDN images; swap with your own assets as needed
 const HERO_SLIDES = [
   {
-    img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1800&q=90",
+    img: heropic,
     tag: "Construction",
     headline: ["Bâtir", "l'Avenir"],
   },
   {
-    img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1800&q=90",
+    img: heropic1,
     tag: "Architecture",
     headline: ["Concevoir", "l'Excellence"],
   },
   {
-    img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1800&q=90",
+    img: heropic2,
     tag: "Résidentiel Prestige",
     headline: ["Votre Rêve,", "Notre Métier"],
   },
