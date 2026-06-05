@@ -18,20 +18,37 @@ import heropic2       from '../assets/heros3.jfif';
 // ─── HERO IMAGES (construction + architecture mood) ──────────────────────────
 // Using reliable Unsplash CDN images; swap with your own assets as needed
 const HERO_SLIDES = [
+  // ── HOUSES ──────────────────────────────────────────────────────────────
   {
-    img: 'https://6a22e17866b5d7d9ebc84028.imgix.net/a-white-villa-in-the-background-with-a-swimming-pool-closer-on-a-clear-sunny-day-509081.jpeg?auto=format&fit=fill&w=640',
-    tag: "Construction",
-    headline: ["Bâtir", "l'Avenir"],
+    img: "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=1800&q=90&auto=format&fit=crop",
+    tag: "Résidentiel Prestige",
+    headline: ["Votre Rêve,", "Notre Métier"],
   },
   {
-    img: 'https://6a22e17866b5d7d9ebc84028.imgix.net/a-construction-site-on-sunset-with-the-building-half-finished--413759.jpeg?w=614&h=368&ar=5%3A3&auto=enhance%2Cformat&fit=fill&fill=generative',
+    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=90&auto=format&fit=crop",
     tag: "Architecture",
     headline: ["Concevoir", "l'Excellence"],
   },
   {
-    img: 'https://6a22e17866b5d7d9ebc84028.imgix.net/construct/hero1.jfif?ar=1%3A1&h=736&w=736&auto=enhance%2Cformat&fit=fill&fill=generative',
-    tag: "Résidentiel Prestige",
-    headline: ["Votre Rêve,", "Notre Métier"],
+    img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1800&q=90&auto=format&fit=crop",
+    tag: "Villa de Prestige",
+    headline: ["L'Élégance,", "Réalisée"],
+  },
+  // ── CONSTRUCTION SITES ──────────────────────────────────────────────────
+  {
+    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=90&auto=format&fit=crop",
+    tag: "Construction",
+    headline: ["Bâtir", "l'Avenir"],
+  },
+  {
+    img: "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?w=1800&q=90&auto=format&fit=crop",
+    tag: "Génie Civil",
+    headline: ["Des Fondations", "Solides"],
+  },
+  {
+    img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1800&q=90&auto=format&fit=crop",
+    tag: "BTP & Infrastructure",
+    headline: ["L'Excellence", "du Chantier"],
   },
 ];
 
