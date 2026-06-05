@@ -91,7 +91,7 @@ export default function Home({ onNavigate }) {
         }
         .hero-img.visible {
           opacity: 1;
-          transform: scale(0.95);
+          transform: scale(0.99);
         }
 
         .slide-dot {
