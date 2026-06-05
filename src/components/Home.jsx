@@ -665,53 +665,13 @@ export default function Home({ onNavigate }) {
             boxShadow: '0 24px 60px rgba(15,44,89,0.08)',
             background: '#0F172A',
           }}>
-            {!videoPlaying ? (
-              <div
-                onClick={() => setVideoPlaying(true)}
-                style={{
-                  position: 'absolute', inset: 0,
-                  cursor: 'pointer',
-                  backgroundImage: `url(https://youtu.be/a_-euN9YZp8?si=2N0ADaTxuRXFbrf3)`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              >
-                <div style={{ position: 'absolute', inset: 0, background: 'rgba(8,16,32,0.5)' }} />
-                <div style={{
-                  position: 'absolute', inset: 0,
-                  display: 'flex', flexDirection: 'column',
-                  alignItems: 'center', justifyContent: 'center', gap: '16px',
-                }}>
-                  <div style={{
-                    width: '76px', height: '76px', borderRadius: '50%',
-                    background: '#FFFFFF',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
-                    transition: 'transform 0.2s ease',
-                  }}
-                    onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.1)'}
-                    onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                  >
-                    <Play size={28} style={{ color: 'var(--accent)', marginLeft: '5px' }} fill="currentColor" />
-                  </div>
-                  <p style={{
-                    fontFamily: "'Outfit', sans-serif",
-                    color: '#FFFFFF', fontWeight: 400,
-                    fontSize: '0.9rem', letterSpacing: '0.06em',
-                  }}>
-                    Voir la vidéo NELWAN SARL
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <iframe
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
-                src="https://youtu.be/a_-euN9YZp8"
-                title="NELWAN SARL"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            )}
+            <iframe
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+              src="https://www.youtube.com/embed/a_-euN9YZp8?autoplay=1&mute=1&loop=1&playlist=a_-euN9YZp8&controls=0&modestbranding=1&rel=0"
+              title="NELWAN SARL"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>
