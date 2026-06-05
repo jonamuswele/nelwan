@@ -671,7 +671,7 @@ export default function Home({ onNavigate }) {
                 style={{
                   position: 'absolute', inset: 0,
                   cursor: 'pointer',
-                  backgroundImage: `url(${imgVilla})`,
+                  backgroundImage: `url(https://youtu.be/a_-euN9YZp8?si=2N0ADaTxuRXFbrf3)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -704,11 +704,12 @@ export default function Home({ onNavigate }) {
                 </div>
               </div>
             ) : (
-              <video
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
-                src={heroVideo3}
-                autoPlay controls playsInline
-                onCanPlay={e => { e.currentTarget.playbackRate = 0.5; }}
+              <iframe
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=0&rel=0&modestbranding=1"
+                title="NELWAN SARL"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
               />
             )}
           </div>
